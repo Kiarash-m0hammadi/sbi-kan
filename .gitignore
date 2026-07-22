@@ -1,0 +1,27 @@
+# Data and Models
+*.csv
+data/**/*.csv
+data/**/*.zip
+data/**/*.arff
+data/**/*.mat
+*.pt
+*.pth
+*.pkl
+*.onnx
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Environments and builds
+.env
+.venv/
+env/
+venv/
+build/
+dist/
+*.egg-info/

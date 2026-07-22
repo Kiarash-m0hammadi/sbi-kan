@@ -1,0 +1,23 @@
+services:
+  sbi-kan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sbi-kan-env:latest
+    container_name: sbi-kan-dev
+    volumes:
+      # Mount current directory to /workspace to sync code changes instantly
+      - .:/workspace
+    # Prevent PyTorch DataLoader bottlenecks
+    shm_size: "8gb"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # Keep container running for interactive bash
+    tty: true
+    stdin_open: true
+    command: bash
