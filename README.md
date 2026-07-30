@@ -171,11 +171,36 @@ pytest -v
 
 ---
 
+## 📐 Formal Verification (Lean 4)
+
+The core mathematical claims of the Spectral Basis Interpretable Unit (including **Theorem 1: Kraus Channel Collapse**, Fourier feature map normalization, and output convex bounds) are formally machine-checked in **Lean 4** using Mathlib.
+
+To verify the proofs locally:
+
+```bash
+# 1. Install Lean 4 (via elan, if not already installed)
+curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
+source $HOME/.elan/env
+
+# 2. Navigate to the repository root
+cd sbi-kan
+
+# 3. Fetch pre-compiled Mathlib cache (prevents 45+ min build time)
+lake exe cache get
+
+# 4. Build and verify all formal proofs
+lake build
+
+All formal proof scripts are located in `src/math/Math.lean`.
+
+---
+
 ## 📁 Repository Structure
 
 ```text
 .
 ├── src/
+│   ├── math/                 # Lean 4 formal verification (Math.lean, Math/Basic.lean)
 │   ├── sbiu/                 # Core math: Fourier encoding, Lie Algebra SO(d), and Born Rule unit
 │   ├── kan/                  # KAN topology: Inner/Outer edge aggregators and Baseline models
 │   ├── data/                 # Toy oscillator generation and PyTorch Datasets
