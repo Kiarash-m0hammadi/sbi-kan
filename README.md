@@ -233,5 +233,4 @@ If you find this architecture, the Riemannian optimization insights, or the Krau
   doi          = {10.5281/zenodo.21710382},
   url          = {https://doi.org/10.5281/zenodo.21710382},
 }
-}
 ```
