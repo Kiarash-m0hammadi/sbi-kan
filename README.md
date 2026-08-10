@@ -220,10 +220,19 @@ All formal proof scripts are located in `src/math/Math.lean`.
 If you find this architecture, the Riemannian optimization insights, or the Kraus Collapse proof useful in your research, please cite our work:
 
 ```bibtex
-@article{sbiu2026,
-  title={Spectral Basis Interpretable Unit: A Learned Orthogonal Projection Module for Interpretable Function Approximation and Unsupervised Regime Discovery},
-  author={Kiarash Mohammadi},
-  journal={---},
+@misc{mohammadi_2026_21710382,
+  author       = {Mohammadi, Kiarash},
+  title        = {Spectral Basis Interpretable Unit: A Learned
+                   Orthogonal Projection Module for Interpretable
+                   Function Approximation and Unsupervised Regime
+                   Discovery
+                  },
+  month        = jul,
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.21710382},
+  url          = {https://doi.org/10.5281/zenodo.21710382},
+}
   year={2026}
 }
 ```
